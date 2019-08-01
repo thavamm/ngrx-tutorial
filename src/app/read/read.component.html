@@ -1,0 +1,8 @@
+<div *ngIf="tutorials">
+<h3>Tutorial</h3>
+<ul>
+    <li *ngFor="let tutorial of tutorials | async; let i=index" (click)="onRemoveTutorial(i)">
+        <a [href]="tutorial.url" target="_blank">{{tutorial.name}}</a>
+    </li>
+</ul>
+</div>
